@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="blankApp">
+    <head>
+        <meta charset='UTF-8'>
+        <title>Sandbox AngularJs</title>
+
+        <link rel="stylesheet" href="lib/bootstrap.min.css">
+        <link rel="stylesheet" href="lib/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="stylesheet.min.css">
+        <link rel="stylesheet" href="lib/prettify.min.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div ng-controller="templateController" ng-include="templateHeader.url">
+            </div>
+            <div ng-view></div>
+        </div>
+        <div ng-controller="templateController" ng-include="templateFooter.url">
+        </div>
+    </body>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/jquery.maskMoney.min.js"></script>
+    <script src="lib/ZeroClipboard.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-locale_pt-br.js"></script>
+    <script src="lib/angular-route.min.js"></script>
+    <script src="lib/ui-bootstrap.min.js"></script>
+    <script src="lib/ui-bootstrap-tpls.min.js"></script>
+    <script src="lib/ui-utils.min.js"></script>
+    <script src="lib/dirPagination.js"></script>
+    <script src="scripts.min.js"></script>
+</html>

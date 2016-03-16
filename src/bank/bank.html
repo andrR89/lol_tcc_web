@@ -1,0 +1,11 @@
+{{hello}}
+
+<div class="container-fluid row" id="topo">
+    <div class="col-xs-12 col-md-8" ng-include="templateSearchBanco.url">
+    </div>
+    <div id="cadastro" class="col-xs-12 col-md-4" ng-include="templateCRUDBank.url"></div>
+</div>
+<div ng-include="templateModalBank.url"></div>
+<script>
+    $('#amount').maskMoney();
+</script>

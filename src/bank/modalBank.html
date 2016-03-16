@@ -1,0 +1,40 @@
+<div class="modal fade" id="bankModalAdd" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h4 class="modal-title" id="myModalLabelX">Confirmação</h4>
+            </div>
+            <div class="modal-body">
+                <h4> Adicionar Banco?</h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal" ng-click="addBank()"
+                        aria-hidden="true">Sim
+                </button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Não</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="bankModalEx" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h4 class="modal-title" id="myModalLabel2X">Confirmação</h4>
+            </div>
+            <div class="modal-body">
+                <h4>Deseja excluir <span class="label label-warning">{{bankShow.bank_code}}</span> Com Valor
+                    <span class="label label-warning">{{bankShow.amount | currency: 'R$ '}}</span>?</h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal" ng-click="deleteBank()"
+                        aria-hidden="true">Sim
+                </button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Não</button>
+            </div>
+        </div>
+    </div>
+</div>

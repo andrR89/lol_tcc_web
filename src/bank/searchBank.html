@@ -1,0 +1,42 @@
+<div class="panel panel-success">
+    <div class="panel-heading">
+        Pesquisa
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <div class="form-group">
+                <label for="pesquisa">Pesquisar</label>
+                <input id="pesquisa" type="text" class="form-control"
+                       placeholder="Pesquise o Banco aqui: (Código ou Remuneração)"
+                       ng-model="query"/>
+            </div>
+            <table class="table table-condensed">
+                <tr>
+                    <th class="hidden-xs"><a href="" ng-click="orderBy('id')">ID</a></th>
+                    <th><a href="" ng-click="orderBy('bank_code')">Código</a></th>
+                    <th><a href="" ng-click="orderBy('amount')">Remuneração</a></th>
+                    <th>Opções</th>
+                </tr>
+                <tr dir-paginate="bank in bankList| filter: query | orderBy:fieldOrderBy:reverse | itemsPerPage: pageSize"
+                    current-page="currentPage">
+                    <td>{{bank.id}}</td>
+                    <td>{{bank.bank_code}}</td>
+                    <td>{{bank.amount| currency:"R$ "}}</td>
+                    <td><a href="" data-toggle="modal" ng-click="showBank(bank)" data-target="#bankModalEx"
+                           class="glyphicon glyphicon-remove" ng-click="deleteBank(bank)"></a>
+                        <a scroll-to="cadastro" ng-click="editBank(bank);"
+                           class="glyphicon glyphicon glyphicon-pencil"></a>
+                    </td>
+                </tr>
+                <tfoot>
+                <td colspan="3" class="hidden-xs"><strong>Total de Bancos no sistema:</strong></td>
+                <td colspan="1" class="hidden-xs">{{bankList.length}}</td>
+                <td colspan="2" class="visible-xs"><strong>Total de Carros: {{bankList.length}}</strong></td>
+                </tfoot>
+            </table>
+        </div>
+        <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)"
+                                 template-url="shared/utils/dirPagination.tpl.html"></dir-pagination-controls>
+
+    </div>
+</div>

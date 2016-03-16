@@ -1,0 +1,8 @@
+/dist/
+/config/node_modules/
+/.idea/
+/src/lib/
+/config/.bowerrc
+/nbproject/
+/node_modules/
+/bower_components/
