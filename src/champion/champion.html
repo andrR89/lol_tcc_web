@@ -1,14 +1,25 @@
-
 <div class="container-fluid row" id="xx">
     <div class="divCorpo col-md-12">
-        <div class="repeticao col-md-2 col-sm-3 col-xs-4" style="text-align: center;"
+        <div class="repeticao col-md-2 col-sm-3 col-xs-4" style="text-align: center; padding: 20px 5px"
              ng-repeat="champion in championList.data">
             <img src="http://ddragon.leagueoflegends.com/cdn/6.5.1/img/champion/{{champion.key}}.png"
-                 class="img-responsive"
+                 class="img-responsive chunda"
                  style="width: 80px; height:80px; border-radius: 50%; border: 4px groove #666;
                      margin-left: auto; margin-right: auto;">
-            <h4>{{champion.name}}</h4>
-            <p>{{champion.title}}</p>
+                <div style="height: 30px; padding-bottom: 20px">
+                    <h4>{{champion.name}}</h4>
+                    <p>{{champion.title}}</p>
+                </div>
         </div>
     </div>
 </div>
+
+<style>
+    img.chunda:hover{
+        height: 90px;
+        width: 90px;
+        opacity: .5;
+        cursor: pointer;
+        transition-easy-all: 5;
+    }
+</style>
