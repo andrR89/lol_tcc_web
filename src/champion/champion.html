@@ -11,7 +11,6 @@
                        ng-model="query"/>
             </div>
         </div>
-        {{query}}
     </div>
 
     <div class="panel panel-info">
@@ -23,7 +22,7 @@
                  style="text-align: center; padding: 20px 5px"
                  ng-repeat="champion in championList.data | filter: query">
                 <a href="" ng-click="selectChampion(champion)">
-                    <img src="http://ddragon.leagueoflegends.com/cdn/6.5.1/img/champion/{{champion.key}}.png"
+                    <img src="http://ddragon.leagueoflegends.com/cdn/6.5.1/img/champion/{{champion.id}}.png"
                          class="img-responsive championlist"
                          style="width: 80px; height:80px; border-radius: 50%; border: 4px groove #666;
                      margin-left: auto; margin-right: auto;"/>
@@ -39,15 +38,42 @@
 
 
 <div class="modal fade" id="bankModalAdd" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
                 <h4 class="modal-title" id="myModalLabelX">{{championSelected.name}}</h4>
             </div>
             <div class="modal-body">
-                <h4>{{championSelected.title}}</h4>
-                <p ng-bind-html="championSelected.lore"></p>
+                <div class="container-fluid row">
+                    <h4>{{championSelected.title}}</h4>
+
+                    <div class="col-md-8">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                Historia
+                            </div>
+                            <div class="panel-body">
+                                <div class="form-group">
+
+                                    <p ng-bind-html="championSelected.lore"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                Info
+                            </div>
+                            <div class="panel-body">
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="modal-footer">
             </div>
@@ -56,6 +82,10 @@
 </div>
 
 <style>
+    .image_champ {
+        margin: 10px;
+    }
+
     .championlist:hover {
         height: 90px;
         width: 90px;
