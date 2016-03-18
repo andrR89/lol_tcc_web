@@ -7,7 +7,8 @@ app.controller('championController', ['$scope', '$timeout', 'championAPI', funct
     $scope.selectChampion = function (champ) {
         championAPI.findById(champ.id, 'skins,lore' ,function (data) {
             $scope.championSelected = data;
-            console.log(data)
+            $('#bankModalAdd').modal('show');
+            console.log(data);
         });
         console.log($scope.championSelected)
     };

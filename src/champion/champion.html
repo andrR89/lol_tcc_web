@@ -22,7 +22,7 @@
             <div class="repeticao col-md-2 col-sm-3 col-xs-4 panel panel-info"
                  style="text-align: center; padding: 20px 5px"
                  ng-repeat="champion in championList.data | filter: query">
-                <a href="" data-toggle="modal" data-target="#bankModalAdd" ng-click="selectChampion(champion)">
+                <a href="" ng-click="selectChampion(champion)">
                     <img src="http://ddragon.leagueoflegends.com/cdn/6.5.1/img/champion/{{champion.key}}.png"
                          class="img-responsive championlist"
                          style="width: 80px; height:80px; border-radius: 50%; border: 4px groove #666;
