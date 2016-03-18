@@ -13,4 +13,21 @@ app.service("championAPI", ['$http', function ($http) {
         });
     };
 
+    this.findById = function (id, championParams, callbackFunc) {
+        var otherParam = '';
+
+        if (championParams) {
+            otherParam = '?champData=' + championParams
+        }
+
+        $http({
+            method: 'GET',
+            url: endpointURL + '/' + id + otherParam
+        }).success(function (data) {
+            callbackFunc(data);
+        }).error(function (data) {
+            console.log("error" + data);
+        });
+    };
+
 }]);

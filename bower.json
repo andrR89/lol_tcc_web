@@ -17,7 +17,8 @@
         "zeroclipboard": "2.1.6",
         "angular-utils-pagination": "0.2.5",
         "angular-google-chart": "0.0.11",
-        "jquery-maskmoney":"3.0.2"
+        "jquery-maskmoney":"3.0.2",
+        "angular-sanitize" : "1.2.x"
     },
     "ignore": [
         "**/.*",

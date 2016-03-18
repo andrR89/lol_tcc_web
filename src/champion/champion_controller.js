@@ -2,6 +2,16 @@ app.controller('championController', ['$scope', '$timeout', 'championAPI', funct
 
     $scope.championList = {};
     $scope.query = '';
+    $scope.championSelected = {};
+
+    $scope.selectChampion = function (champ) {
+        championAPI.findById(champ.id, 'skins,lore' ,function (data) {
+            $scope.championSelected = data;
+            console.log(data)
+        });
+        console.log($scope.championSelected)
+    };
+
 
     $scope.loadChamps = function () {
         //championAPI.findAll(function (data) {
