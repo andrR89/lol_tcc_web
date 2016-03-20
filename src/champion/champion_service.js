@@ -1,6 +1,6 @@
 app.service("championAPI", ['$http', function ($http) {
 
-    var endpointURL = "http://0.0.0.0:5000/lol/static/champions";
+    var endpointURL = "https://tranquil-sands-45240.herokuapp.com/lol/static/champions";
 
     this.findAll = function (callbackFunc) {
         $http({
