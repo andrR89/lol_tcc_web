@@ -5,7 +5,7 @@ app.service("championAPI", ['$http', function ($http) {
     this.findAll = function (callbackFunc) {
         $http({
             method: 'GET',
-            url: 'http://ddragon.leagueoflegends.com/cdn/6.5.1/data/pt_BR/champion.json'
+            url: 'https://ddragon.leagueoflegends.com/cdn/6.5.1/data/pt_BR/champion.json'
         }).success(function (data) {
             callbackFunc(data);
         }).error(function (data) {
